@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrameHub - Digital Photo Frame for iPad</title>
+    <meta name="description" content="Turn your iPad into an elegant digital photo frame. Privacy first, remote control, info slates.">
+    <link rel="icon" type="image/png" href="icon.png">
+    <meta property="og:title" content="FrameHub - Digital Photo Frame">
+    <meta property="og:description" content="Turn your iPad into an elegant frame. Privacy first, remote control, info slates.">
+    <meta property="og:image" content="https://frame-hub.app/icon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        
+        .lang-switch a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+        
+        .lang-switch a:hover,
+        .lang-switch a.active {
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 40px 0 60px;
+        }
+        
+        .logo {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 24px;
+            filter: drop-shadow(0 20px 40px rgba(102, 126, 234, 0.3));
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .tagline {
+            font-size: 1.4rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 32px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+        }
+        
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.15);
+        }
+        
+        .coming-soon-badge {
+            display: inline-block;
+            background: rgba(102, 126, 234, 0.2);
+            border: 1px solid rgba(102, 126, 234, 0.4);
+            color: #667eea;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 60px 0;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        
+        .feature-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 32px;
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
+            background: rgba(255,255,255,0.08);
+            transform: translateY(-4px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+        
+        .feature-card p {
+            color: rgba(255,255,255,0.7);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .feature-card .highlight {
+            color: #667eea;
+            font-weight: 500;
+        }
+        
+        /* Compatibility */
+        .compatibility {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 40px;
+        }
+        
+        .compatibility p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.95rem;
+        }
+        
+        .compatibility strong {
+            color: rgba(255,255,255,0.9);
+        }
+        
+        /* Links */
+        .links {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+        }
+        
+        .links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            margin: 0 16px;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        
+        .links a:hover {
+            color: #667eea;
+        }
+        
+        footer {
+            margin-top: 48px;
+            text-align: center;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.85rem;
+        }
+        
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .tagline { font-size: 1.2rem; }
+            .logo { max-width: 150px; }
+            .container { padding: 24px 16px; }
+            .feature-card { padding: 24px; }
+            .links a { display: block; margin: 12px 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="lang-switch">
+        <a href="index.html">PL</a>
+        <a href="index-en.html" class="active">EN</a>
+    </div>
+    
+    <div class="container">
+        <section class="hero">
+            <img src="logo.png" alt="FrameHub Logo" class="logo">
+            <h1>FrameHub</h1>
+            <p class="tagline">Turn your iPad into a digital photo frame</p>
+            <p class="subtitle">Privacy First • Remote Control • Info Slates</p>
+            
+            <div class="cta-buttons">
+                <span class="coming-soon-badge">🚀 Coming Soon to App Store</span>
+            </div>
+            
+            <!-- After launch replace with:
+            <div class="cta-buttons">
+                <a href="https://apps.apple.com/app/framehub/idXXXXXXXXX" class="btn btn-primary">
+                    Download on App Store
+                </a>
+            </div>
+            -->
+        </section>
+        
+        <section class="features">
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🖼️</div>
+                    <h3>Give Your iPad a Second Life</h3>
+                    <p>Got an old iPad collecting dust? <span class="highlight">Transform it into an elegant digital photo frame.</span> Works with any iPad from 2017 onwards. Place it on a shelf, desk, or nightstand and enjoy your memories.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Privacy First</h3>
+                    <p><span class="highlight">Your photos never leave your device.</span> No cloud uploads, no tracking. The app uses only your local Photos library. You control access to your memories.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Many Frames, One Remote</h3>
+                    <p>iPad in the kitchen, another in the living room, one more in the bedroom? <span class="highlight">Control them all from your iPhone.</span> Each frame can have different albums and schedules. Synced via your Apple Account.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Info Slates Between Photos</h3>
+                    <p>Display <span class="highlight">weather, clock, calendar, notes</span> or any website between photos. Set timing by minutes or number of photos. More slate types coming soon!</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="compatibility">
+            <p><strong>Compatibility:</strong> iPad (5th gen or newer, from 2017), iPad Air (3rd gen+), iPad Pro (all models), iPad mini (5th gen+)</p>
+            <p style="margin-top: 8px;">Requires iPadOS 16 or later</p>
+        </section>
+        
+        <div class="links">
+            <a href="privacy-en.html">Privacy Policy</a>
+            <a href="support-en.html">Support & FAQ</a>
+            <a href="terms-en.html">Terms of Service</a>
+            <a href="mailto:support@frame-hub.app">Contact</a>
+        </div>
+        
+        <footer>
+            <p>© 2025 FrameHub. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
