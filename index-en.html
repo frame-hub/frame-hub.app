@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrameHub - Digital Photo Frame</title>
+    <meta name="description" content="Turn your iPad into an elegant digital photo frame. Slideshow, remote control, night mode.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.4);
+        }
+        
+        .logo svg {
+            width: 60px;
+            height: 60px;
+            fill: white;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .tagline {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 48px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+        
+        .feature {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 24px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+        
+        .feature h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+        
+        .feature p {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+        }
+        
+        .coming-soon {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 30px;
+            padding: 16px 32px;
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .links {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            margin: 0 16px;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        
+        .links a:hover {
+            color: #667eea;
+        }
+        
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        
+        .lang-switch a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+        
+        .lang-switch a:hover,
+        .lang-switch a.active {
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+        }
+        
+        footer {
+            margin-top: 48px;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.85rem;
+        }
+        
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .tagline { font-size: 1rem; }
+            .container { padding: 24px 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="lang-switch">
+        <a href="index.html">PL</a>
+        <a href="index-en.html" class="active">EN</a>
+    </div>
+    
+    <div class="container">
+        <div class="logo">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5-7l-3 3.72L9 13l-3 4h12l-4-5z"/>
+            </svg>
+        </div>
+        
+        <h1>FrameHub</h1>
+        <p class="tagline">Turn your iPad into an elegant digital photo frame</p>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🖼️</div>
+                <h3>Slideshow</h3>
+                <p>Ken Burns effect, smooth transitions, Live Photos support</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📱</div>
+                <h3>Remote Control</h3>
+                <p>Control your frame from another device via iCloud</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🌙</div>
+                <h3>Night Mode</h3>
+                <p>Automatic screen dimming at night</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📊</div>
+                <h3>Info Slates</h3>
+                <p>Weather, clock, calendar between photos</p>
+            </div>
+        </div>
+        
+        <div class="coming-soon">
+            🚀 Coming Soon to App Store
+        </div>
+        
+        <div class="links">
+            <a href="privacy-en.html">Privacy Policy</a>
+            <a href="support-en.html">Support</a>
+            <a href="terms-en.html">Terms of Service</a>
+            <a href="mailto:support@frame-hub.app">Contact</a>
+        </div>
+        
+        <footer>
+            <p>© 2025 FrameHub. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

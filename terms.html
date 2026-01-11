@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regulamin - FrameHub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #fff;
+            line-height: 1.7;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            margin-bottom: 32px;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        
+        .back-link:hover {
+            color: #667eea;
+        }
+        
+        .back-link svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+        
+        .lang-switch {
+            float: right;
+        }
+        
+        .lang-switch a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+        
+        .lang-switch a:hover,
+        .lang-switch a.active {
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .last-updated {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+            margin-bottom: 32px;
+        }
+        
+        .content {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 32px;
+            backdrop-filter: blur(10px);
+        }
+        
+        h2 {
+            font-size: 1.4rem;
+            margin: 32px 0 16px 0;
+            color: #667eea;
+        }
+        
+        h2:first-child {
+            margin-top: 0;
+        }
+        
+        p {
+            margin-bottom: 16px;
+            color: rgba(255,255,255,0.85);
+        }
+        
+        ul, ol {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            color: rgba(255,255,255,0.85);
+        }
+        
+        a {
+            color: #667eea;
+        }
+        
+        footer {
+            margin-top: 48px;
+            text-align: center;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.85rem;
+        }
+        
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .content { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switch">
+            <a href="terms.html" class="active">PL</a>
+            <a href="terms-en.html">EN</a>
+        </div>
+        
+        <a href="index.html" class="back-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+            Powrót do strony głównej
+        </a>
+        
+        <h1>Regulamin</h1>
+        <p class="last-updated">Ostatnia aktualizacja: Styczeń 2025</p>
+        
+        <div class="content">
+            <h2>1. Akceptacja warunków</h2>
+            <p>Korzystając z aplikacji FrameHub ("Aplikacja"), akceptujesz niniejszy Regulamin. Jeśli nie zgadzasz się z tymi warunkami, nie korzystaj z Aplikacji.</p>
+            
+            <h2>2. Opis usługi</h2>
+            <p>FrameHub to aplikacja mobilna umożliwiająca:</p>
+            <ul>
+                <li>Wyświetlanie pokazu slajdów ze zdjęć z biblioteki urządzenia</li>
+                <li>Zdalne sterowanie pokazem z innych urządzeń</li>
+                <li>Wyświetlanie plansz informacyjnych (pogoda, zegar, kalendarz)</li>
+                <li>Tryb ramki cyfrowej (Kiosk)</li>
+            </ul>
+            
+            <h2>3. Konto i dostęp</h2>
+            <p>Do korzystania z niektórych funkcji wymagane jest konto iCloud. Jesteś odpowiedzialny za:</p>
+            <ul>
+                <li>Bezpieczeństwo swojego konta Apple ID</li>
+                <li>Wszystkie działania wykonywane przy użyciu Twojego konta</li>
+                <li>Zgodność z warunkami korzystania z usług Apple</li>
+            </ul>
+            
+            <h2>4. Licencja</h2>
+            <p>Udzielamy Ci ograniczonej, niewyłącznej, niezbywalnej licencji na korzystanie z Aplikacji na urządzeniach będących Twoją własnością, zgodnie z niniejszym Regulaminem i warunkami App Store.</p>
+            
+            <h2>5. Zakupy w aplikacji</h2>
+            <p>Aplikacja oferuje wersję bezpłatną oraz płatną wersję Pro:</p>
+            <ul>
+                <li>Zakup wersji Pro jest jednorazowy i nieodnawialny</li>
+                <li>Zakup jest powiązany z Twoim Apple ID</li>
+                <li>Możesz przywrócić zakup na innych urządzeniach zalogowanych do tego samego Apple ID</li>
+                <li>Zwroty są realizowane zgodnie z polityką Apple</li>
+            </ul>
+            
+            <h2>6. Treści użytkownika</h2>
+            <p>Aplikacja wyświetla zdjęcia z Twojej biblioteki. Jesteś odpowiedzialny za:</p>
+            <ul>
+                <li>Posiadanie praw do wyświetlanych treści</li>
+                <li>Przestrzeganie praw autorskich i własności intelektualnej</li>
+                <li>Niewyświetlanie treści nielegalnych lub szkodliwych</li>
+            </ul>
+            
+            <h2>7. Ograniczenia użytkowania</h2>
+            <p>Zgadzasz się nie:</p>
+            <ul>
+                <li>Odtwarzać kodu źródłowego ani dezasemblować Aplikacji</li>
+                <li>Modyfikować ani tworzyć dzieł pochodnych</li>
+                <li>Wykorzystywać Aplikacji do celów komercyjnych bez zgody</li>
+                <li>Obchodzić zabezpieczeń technicznych</li>
+                <li>Używać Aplikacji w sposób naruszający prawo</li>
+            </ul>
+            
+            <h2>8. Usługi zewnętrzne</h2>
+            <p>Aplikacja korzysta z usług zewnętrznych:</p>
+            <ul>
+                <li><strong>Apple iCloud:</strong> do synchronizacji ustawień i zdalnego sterowania</li>
+                <li><strong>Apple WeatherKit / Open-Meteo:</strong> do pobierania danych pogodowych</li>
+                <li><strong>Google AdMob:</strong> do wyświetlania reklam w wersji bezpłatnej</li>
+            </ul>
+            <p>Korzystanie z tych usług podlega ich własnym regulaminom.</p>
+            
+            <h2>9. Prywatność</h2>
+            <p>Przetwarzanie danych osobowych reguluje nasza <a href="privacy.html">Polityka Prywatności</a>.</p>
+            
+            <h2>10. Dostępność usługi</h2>
+            <p>Dokładamy starań, aby Aplikacja działała prawidłowo, jednak:</p>
+            <ul>
+                <li>Nie gwarantujemy ciągłej dostępności</li>
+                <li>Możemy wprowadzać aktualizacje i zmiany</li>
+                <li>Możemy wycofać Aplikację z powiadomieniem</li>
+                <li>Funkcje wymagające internetu zależą od dostępności sieci</li>
+            </ul>
+            
+            <h2>11. Wyłączenie odpowiedzialności</h2>
+            <p>Aplikacja jest dostarczana "tak jak jest". W maksymalnym zakresie dozwolonym przez prawo:</p>
+            <ul>
+                <li>Nie ponosimy odpowiedzialności za szkody wynikające z użytkowania Aplikacji</li>
+                <li>Nie gwarantujemy, że Aplikacja spełni wszystkie Twoje oczekiwania</li>
+                <li>Nie odpowiadamy za utratę danych</li>
+                <li>Nasza odpowiedzialność jest ograniczona do kwoty zapłaconej za Aplikację</li>
+            </ul>
+            
+            <h2>12. Zmiany regulaminu</h2>
+            <p>Możemy aktualizować niniejszy Regulamin. O istotnych zmianach poinformujemy poprzez:</p>
+            <ul>
+                <li>Aktualizację daty na górze dokumentu</li>
+                <li>Powiadomienie w Aplikacji (w przypadku istotnych zmian)</li>
+            </ul>
+            <p>Dalsze korzystanie z Aplikacji po zmianach oznacza ich akceptację.</p>
+            
+            <h2>13. Prawo właściwe</h2>
+            <p>Niniejszy Regulamin podlega prawu polskiemu. Wszelkie spory będą rozstrzygane przez sądy polskie.</p>
+            
+            <h2>14. Rozdzielność postanowień</h2>
+            <p>Jeśli którekolwiek postanowienie Regulaminu zostanie uznane za nieważne, pozostałe postanowienia pozostają w mocy.</p>
+            
+            <h2>15. Kontakt</h2>
+            <p>W sprawach dotyczących Regulaminu:</p>
+            <p>Email: <a href="mailto:support@frame-hub.app">support@frame-hub.app</a></p>
+        </div>
+        
+        <footer>
+            <p>© 2025 FrameHub. Wszelkie prawa zastrzeżone.</p>
+        </footer>
+    </div>
+</body>
+</html>
